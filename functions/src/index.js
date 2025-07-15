@@ -9,7 +9,9 @@
 import {setGlobalOptions} from "firebase-functions";
 import {onRequest} from "firebase-functions/https";
 // import logger from "firebase-functions/logger";
-import {hello} from "./handlers/helloWorld.js";
+// import {hello} from "./handlers/helloWorld.js";
+import functions from "firebase-functions";
+import apiHandler from "./handlers/api.js";
 
 // For cost control, you can set the maximum number of containers that can be
 // running at the same time. This helps mitigate the impact of unexpected
@@ -26,4 +28,5 @@ setGlobalOptions({maxInstances: 10});
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
 
-export const helloWorld = onRequest(hello);
+// export const helloWorld = onRequest(hello);
+export const helloWorld = onRequest(apiHandler.callback());
