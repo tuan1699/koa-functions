@@ -29,4 +29,10 @@ setGlobalOptions({maxInstances: 10});
 // https://firebase.google.com/docs/functions/get-started
 
 // export const helloWorld = onRequest(hello);
+
+/**
+ * Firebase URL with format:
+ * http://127.0.0.1:5001/<project-id>/<region>/<function-name>
+ * http://127.0.0.1:5001/avada-onboarding/us-central1/helloWorld/api/helloWorld
+ */
 export const helloWorld = onRequest(apiHandler.callback());
