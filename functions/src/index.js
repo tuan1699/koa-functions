@@ -35,4 +35,4 @@ setGlobalOptions({maxInstances: 10});
  * http://127.0.0.1:5001/<project-id>/<region>/<function-name>
  * http://127.0.0.1:5001/avada-onboarding/us-central1/helloWorld/api/helloWorld
  */
-export const helloWorld = onRequest(apiHandler.callback());
+export const api = onRequest(apiHandler.callback());
